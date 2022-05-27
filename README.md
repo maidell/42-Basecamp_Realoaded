@@ -1,2 +1,2 @@
 # 42SP
-My work as a cadet in 42 São Paulo
+My work as a cadet in 42 São Paulo.
