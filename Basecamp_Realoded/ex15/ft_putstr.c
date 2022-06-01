@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaidel- <mmaidel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 22:10:33 by mmaidel-          #+#    #+#             */
-/*   Updated: 2022/05/27 22:10:36 by mmaidel-         ###   ########.fr       */
+/*   Created: 2022/05/27 04:06:47 by mmaidel-          #+#    #+#             */
+/*   Updated: 2022/05/27 04:17:34 by mmaidel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putstr(char *str)
 {
-	char	c;
-
-	c = 48;
-	while (c <= 57)
+	while (*str != '\0')
 	{
-		write(1, &c, 1);
-		c++;
+		write (1, str, 1);
+		str++;
 	}
 }

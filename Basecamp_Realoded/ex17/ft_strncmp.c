@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaidel- <mmaidel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 22:10:33 by mmaidel-          #+#    #+#             */
-/*   Updated: 2022/05/27 22:10:36 by mmaidel-         ###   ########.fr       */
+/*   Created: 2022/05/27 04:07:00 by mmaidel-          #+#    #+#             */
+/*   Updated: 2022/05/27 22:27:35 by mmaidel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char	c;
+	unsigned int	counter;
 
-	c = 48;
-	while (c <= 57)
+	counter = 0;
+	while (counter < n && (s1[counter] != '\0' || s2[counter] != '\0'))
 	{
-		write(1, &c, 1);
-		c++;
+		if ((unsigned char)s1[counter] != (unsigned char)s2[counter])
+			return ((unsigned char)s1[counter] - (unsigned char)s2[counter]);
+		counter++;
 	}
+	return (0);
 }

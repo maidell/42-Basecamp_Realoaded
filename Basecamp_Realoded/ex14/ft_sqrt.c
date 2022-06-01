@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaidel- <mmaidel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 22:10:33 by mmaidel-          #+#    #+#             */
-/*   Updated: 2022/05/27 22:10:36 by mmaidel-         ###   ########.fr       */
+/*   Created: 2022/05/27 22:50:06 by mmaidel-          #+#    #+#             */
+/*   Updated: 2022/05/27 23:42:08 by mmaidel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int	ft_sqrt(int nb)
 {
-	char	c;
+	int	squirtle;
 
-	c = 48;
-	while (c <= 57)
-	{
-		write(1, &c, 1);
-		c++;
-	}
+	squirtle = 0;
+	while (nb > (squirtle * squirtle) && squirtle < 46340)
+		squirtle++;
+	if (squirtle * squirtle == nb)
+		return (squirtle);
+	return (0);
 }

@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaidel- <mmaidel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 22:10:33 by mmaidel-          #+#    #+#             */
-/*   Updated: 2022/05/27 22:10:36 by mmaidel-         ###   ########.fr       */
+/*   Created: 2022/05/27 04:06:54 by mmaidel-          #+#    #+#             */
+/*   Updated: 2022/05/27 22:58:18 by mmaidel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int	ft_strlen(char *str)
 {
-	char	c;
+	int	i;
 
-	c = 48;
-	while (c <= 57)
-	{
-		write(1, &c, 1);
-		c++;
-	}
+	i = 0;
+	while (*str++)
+	i++;
+	return (i);
 }

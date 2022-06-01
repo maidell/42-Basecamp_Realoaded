@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaidel- <mmaidel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 22:10:33 by mmaidel-          #+#    #+#             */
-/*   Updated: 2022/05/27 22:10:36 by mmaidel-         ###   ########.fr       */
+/*   Created: 2022/05/27 22:44:02 by mmaidel-          #+#    #+#             */
+/*   Updated: 2022/05/27 23:15:16 by mmaidel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int	ft_iterative_factorial(int nb)
 {
-	char	c;
+	int	start;
+	int	finish;
 
-	c = 48;
-	while (c <= 57)
+	start = 1;
+	finish = 1;
+	if (nb < 0 || nb >= 13)
+		return (0);
+	while (start <= nb)
 	{
-		write(1, &c, 1);
-		c++;
+		finish *= start;
+		start++;
 	}
+	return (finish);
 }
